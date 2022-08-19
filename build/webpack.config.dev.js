@@ -8,7 +8,7 @@ module.exports = {
   mode: 'development',
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, '../example/components', PackageJson.name)
+    path: path.resolve(__dirname, '../example2/components', PackageJson.name)
   },
   resolve: {
     extensions: ['.js', '.vue'],

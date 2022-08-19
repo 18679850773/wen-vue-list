@@ -49,27 +49,14 @@ module.exports = {
   },
   lintOnSave: false,
   transpileDependencies: [
-    'vue-echarts',
     'resize-detector',
     'vue-plugin-load-script',
-    'echarts'
   ],
   devServer: {
     disableHostCheck: true,
     contentBase: path.join(__dirname, '../dev'),
     proxy: {
-        '/phoenix/arctic': {
-            target: 'http://arctic.intra.sit.beyonds.gw',
-            changeOrigin: true,
-        }, 
-        '/phoenix/poly': {
-            target: 'http://poly.intra.sit.beyonds.gw',
-            changeOrigin: true,
-        },
-        '/cdn': {
-            target: 'https://spres.beyonds.com',
-            changeOrigin: true,
-        }       
+        
     }
   }
 }

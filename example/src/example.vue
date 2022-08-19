@@ -106,156 +106,156 @@ export default {
   mounted() {
   },
   methods: {
-    changeData2() {
-      this.changeData([
-          {
-            id: '003',
-            name: '003小文',                   
-            sex: '男11',                     
-            age: {
-              d: 30,
-              x: 18
-            },
-            weight: 55.5,
-            address: '003北京市朝阳区来广营',
-            education: '大专',
-            nativePlace: '江西南昌',
-            marriage: '已婚',
-            birth: '是',
-            spouseName: 'ashis11',
-            record: '',
-            company: '北京市某某公司',
-            friend: '张萨满',
-            parent: 'SASDHWHDS',
-            brother: '阿斯蒂,十点的飞机,大幅高开',
-            abs: '好汉跟我走，眼泪往下流',
-            url: ''
-          },
-          {
-            id: '004',
-            name: '004小文',                   
-            sex: '男11',                     
-            age: {
-              d: 31,
-              x: 18
-            },
-            weight: 55.5,
-            address: '004北京市朝阳区来广营',
-            education: '大专',
-            nativePlace: '江西南昌',
-            marriage: '已婚',
-            birth: '是',
-            spouseName: 'ashis',
-            record: '',
-            company: '北京市某某公司',
-            friend: '张萨满',
-            parent: 'SASDHWHDS',
-            brother: '阿斯蒂,十点的飞机,大幅高开',
-            abs: '好汉跟我走，眼泪往下流',
-            url: ''
-          },
-          {
-            id: '003',
-            name: '003小文',                   
-            sex: '男11',                     
-            age: {
-              d: 32,
-              x: 18
-            },
-            weight: 55.5,
-            address: '003北京市朝阳区来广营',
-            education: '大专',
-            nativePlace: '江西南昌',
-            marriage: '已婚',
-            birth: '是',
-            spouseName: 'ashis11',
-            record: '',
-            company: '北京市某某公司',
-            friend: '张萨满',
-            parent: 'SASDHWHDS',
-            brother: '阿斯蒂,十点的飞机,大幅高开',
-            abs: '好汉跟我走，眼泪往下流',
-            url: ''
-          },
-          {
-            id: '004',
-            name: '004小文',                   
-            sex: '男11',                     
-            age: {
-              d: 33,
-              x: 18
-            },
-            weight: 55.5,
-            address: '004北京市朝阳区来广营',
-            education: '大专',
-            nativePlace: '江西南昌',
-            marriage: '已婚',
-            birth: '是',
-            spouseName: 'ashis',
-            record: '',
-            company: '北京市某某公司',
-            friend: '张萨满',
-            parent: 'SASDHWHDS',
-            brother: '阿斯蒂,十点的飞机,大幅高开',
-            abs: '好汉跟我走，眼泪往下流',
-            url: ''
-          },
-        ])
-    },
-    changeData(list=[]) {
-      this.loading = true
-      setTimeout(() => {
-        console.log(list)
-        this.list = list
-        this.loading = false
-      }, 3000);
-    },
-    testSelect() {
-      console.log('test:checkbox')
-    },
-    clear1(e) {
-      console.log('clear')
-      this.list = null
-      this.clearText1 = '123'
-    },
-    clear: function(row) {
-      console.log('clear')
-      this.clearText = '123'
-      this.$refs.multipleTable.toggleAllSelection();
-    },
-    cardClick(index, row) {
-      console.log(index, row)
-    },
-    cardCheckChange(val, row, index, data) {
-      console.log(val, row, index, data)
-    },
-    cardAllcheckChange(val) {
-      console.log(val)
-    },
-    chakan({row}) {
-      this.$refs.multipleTable.toggleRowSelection(row, true)
-      console.log(21345, row)
-    },
-    yesOrNo(detail,) {
-      let { row, $index } = detail;
-
-      const personInfo = this.list.find((e,i) => i == $index);
-      personInfo.weight = 1
-      // if (this.isTagging) {
-      //   personInfo.taggingResult = result;
-      // } else {
-      //   personInfo.checkResult = result;
-      // }
-      this.$set(this.list, $index, personInfo);
-      console.log(row, $index)
-    },
-    // tableRowClassName2(row) {
-    //   console.log(111, row)
-    //   return 'test'
+    // changeData2() {
+    //   this.changeData([
+    //       {
+    //         id: '003',
+    //         name: '003小文',                   
+    //         sex: '男11',                     
+    //         age: {
+    //           d: 30,
+    //           x: 18
+    //         },
+    //         weight: 55.5,
+    //         address: '003北京市朝阳区来广营',
+    //         education: '大专',
+    //         nativePlace: '江西南昌',
+    //         marriage: '已婚',
+    //         birth: '是',
+    //         spouseName: 'ashis11',
+    //         record: '',
+    //         company: '北京市某某公司',
+    //         friend: '张萨满',
+    //         parent: 'SASDHWHDS',
+    //         brother: '阿斯蒂,十点的飞机,大幅高开',
+    //         abs: '好汉跟我走，眼泪往下流',
+    //         url: ''
+    //       },
+    //       {
+    //         id: '004',
+    //         name: '004小文',                   
+    //         sex: '男11',                     
+    //         age: {
+    //           d: 31,
+    //           x: 18
+    //         },
+    //         weight: 55.5,
+    //         address: '004北京市朝阳区来广营',
+    //         education: '大专',
+    //         nativePlace: '江西南昌',
+    //         marriage: '已婚',
+    //         birth: '是',
+    //         spouseName: 'ashis',
+    //         record: '',
+    //         company: '北京市某某公司',
+    //         friend: '张萨满',
+    //         parent: 'SASDHWHDS',
+    //         brother: '阿斯蒂,十点的飞机,大幅高开',
+    //         abs: '好汉跟我走，眼泪往下流',
+    //         url: ''
+    //       },
+    //       {
+    //         id: '003',
+    //         name: '003小文',                   
+    //         sex: '男11',                     
+    //         age: {
+    //           d: 32,
+    //           x: 18
+    //         },
+    //         weight: 55.5,
+    //         address: '003北京市朝阳区来广营',
+    //         education: '大专',
+    //         nativePlace: '江西南昌',
+    //         marriage: '已婚',
+    //         birth: '是',
+    //         spouseName: 'ashis11',
+    //         record: '',
+    //         company: '北京市某某公司',
+    //         friend: '张萨满',
+    //         parent: 'SASDHWHDS',
+    //         brother: '阿斯蒂,十点的飞机,大幅高开',
+    //         abs: '好汉跟我走，眼泪往下流',
+    //         url: ''
+    //       },
+    //       {
+    //         id: '004',
+    //         name: '004小文',                   
+    //         sex: '男11',                     
+    //         age: {
+    //           d: 33,
+    //           x: 18
+    //         },
+    //         weight: 55.5,
+    //         address: '004北京市朝阳区来广营',
+    //         education: '大专',
+    //         nativePlace: '江西南昌',
+    //         marriage: '已婚',
+    //         birth: '是',
+    //         spouseName: 'ashis',
+    //         record: '',
+    //         company: '北京市某某公司',
+    //         friend: '张萨满',
+    //         parent: 'SASDHWHDS',
+    //         brother: '阿斯蒂,十点的飞机,大幅高开',
+    //         abs: '好汉跟我走，眼泪往下流',
+    //         url: ''
+    //       },
+    //     ])
     // },
-    rowclick2(row, column, event) {
-      console.log(row, event)
-    }
+    // changeData(list=[]) {
+    //   this.loading = true
+    //   setTimeout(() => {
+    //     console.log(list)
+    //     this.list = list
+    //     this.loading = false
+    //   }, 3000);
+    // },
+    // testSelect() {
+    //   console.log('test:checkbox')
+    // },
+    // clear1(e) {
+    //   console.log('clear', e)
+    //   this.list = null
+    //   this.clearText1 = '123'
+    // },
+    // clear: function(row) {
+    //   console.log('clear', row)
+    //   this.clearText = '123'
+    //   this.$refs.multipleTable.toggleAllSelection();
+    // },
+    // cardClick(index, row) {
+    //   console.log(index, row)
+    // },
+    // cardCheckChange(val, row, index, data) {
+    //   console.log(val, row, index, data)
+    // },
+    // cardAllcheckChange(val) {
+    //   console.log(val)
+    // },
+    // chakan({row}) {
+    //   this.$refs.multipleTable.toggleRowSelection(row, true)
+    //   console.log(21345, row)
+    // },
+    // yesOrNo(detail,) {
+    //   let { row, $index } = detail;
+
+    //   const personInfo = this.list.find((e,i) => i == $index);
+    //   personInfo.weight = 1
+    //   // if (this.isTagging) {
+    //   //   personInfo.taggingResult = result;
+    //   // } else {
+    //   //   personInfo.checkResult = result;
+    //   // }
+    //   this.$set(this.list, $index, personInfo);
+    //   console.log(row, $index)
+    // },
+    // // tableRowClassName2(row) {
+    // //   console.log(111, row)
+    // //   return 'test'
+    // // },
+    // rowclick2(row, column, event) {
+    //   console.log(row, event)
+    // }
   },
 }
 </script>
